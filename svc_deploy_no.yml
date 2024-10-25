@@ -1,0 +1,37 @@
+---
+# svc-shop
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-error
+spec:
+  selector:
+    app: error
+  ports:
+  - port: 80
+    targetPort: 80
+---
+# deploy-shop
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: error
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: error
+  template:
+    metadata:
+      labels:
+        app: error
+    spec:
+      containers:
+      - name: error
+        image: doro0704/portal:no
+        resources:
+          limits:
+            memory: "64Mi"
+            cpu: "250m"
+        ports:
+        - containerPort: 80
