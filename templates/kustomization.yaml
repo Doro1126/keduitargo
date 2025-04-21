@@ -1,0 +1,7 @@
+resources:
+- svc_deploy_main.yml
+- svc_deploy_blog.yml
+- svc_deploy_no.yml
+- svc_deploy_shop.yml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
