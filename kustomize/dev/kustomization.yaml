@@ -1,7 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 images:
-- name: doro0704/portal:blog
-  newTag: shop
+- name: doro0704/portal:shop
+  newTag: main
 resources:
 - ../../templates
