@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: error
-        image: doro0704/portal:no
+        image: doro0704/portal:error
         resources:
           limits:
             memory: "64Mi"
